@@ -4,7 +4,7 @@
     --secondary-color: #1E5F3E; /* A darker green for hover effects */
     --background-color: #1a1a1a; /* A soft black for the main background */
     --text-color: #e0e0e0; /* A soft white for easy reading */
-    --card-background: #2a2a2a; /* A slightly lighter black for cards */
+    --card-background: #2a2a2a; /* A slightly lighter black for the cards */
     --divider-color: #444; /* A subtle grey for dividers and borders */
 }
 
@@ -53,16 +53,19 @@ header p {
     opacity: 0.8;
 }
 
+/* --- UPDATED: Navigation Styles with Icons --- */
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
     font-size: 1.1rem;
     transition: color 0.3s ease;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align icon and text */
+    gap: 8px; /* Add a little space between icon and text */
 }
 
 nav a:hover {
-    color: #a0d0d0; /* A light grey for hover effect */
+    color: #a0d0d0; /* A light grey for the hover effect */
 }
 
 /* --- Main Content & Project Grid --- */
@@ -123,10 +126,6 @@ main h2 {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
-
-.project-info a:hover {
-    background-color: var(--secondary-color);
 }
 
 .view-details-btn {
