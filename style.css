@@ -4,7 +4,8 @@
     --secondary-color: #1E5F3E; /* A darker green for hover effects */
     --background-color: #1a1a1a; /* A soft black for the main background */
     --text-color: #e0e0e0; /* A soft white for easy reading */
-    --card-background: #2a2a2a; /* A slightly lighter black for the cards */
+    --card-background: #2a2a2a; /* A slightly lighter black for cards */
+    --divider-color: #444; /* A subtle grey for dividers and borders */
 }
 
 body {
@@ -61,7 +62,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #a0d0d0; /* A light grey for the hover effect */
+    color: #a0d0d0; /* A light grey for hover effect */
 }
 
 /* --- Main Content & Project Grid --- */
@@ -69,7 +70,7 @@ main h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5rem;
-    border-bottom: 1px solid #444; /* <-- ADDED DIVIDER */
+    border-bottom: 1px solid var(--divider-color); /* <-- ADDED DIVIDER */
     padding-bottom: 40px; /* <-- ADDED PADDING */
 }
 
@@ -134,11 +135,34 @@ main h2 {
     background-color: #555;
 }
 
+/* ADDED: A specific style for the view-details button to make it full width */
+.project-info .view-details-btn {
+    width: 100%; /* Makes the button take up the full width */
+}
+
+/* --- Unified Secondary Button Style --- */
+.secondary-action-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensures it takes the full width available */
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; /* Centers the text inside */
+}
+
+.secondary-action-btn:hover {
+    background-color: var(--secondary-color);
+}
+
 /* --- Contact Section --- */
 #contact {
     text-align: center;
     padding: 40px 0; /* <-- CHANGED FROM 60px 0 */
-    border-bottom: 1px solid #444; /* <-- ADDED DIVIDER */
+    border-bottom: 1px solid var(--divider-color); /* <-- ADDED DIVIDER */
 }
 
 .contact-button {
@@ -157,44 +181,6 @@ main h2 {
 
 .contact-button:hover {
     background-color: var(--secondary-color);
-}
-
-/* --- Skills Section --- */
-#skills {
-    padding: 60px 0;
-    text-align: center;
-    border-bottom: 1px solid #444; /* <-- ADDED DIVIDER */
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-}
-
-.skill-card {
-    background-color: var(--card-background);
-    padding: 30px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.skill-card i {
-    font-size: 3rem; /* Make the icons large */
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.skill-card h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: var(--text-color);
 }
 
 /* --- Footer --- */
@@ -390,7 +376,7 @@ footer {
 
 .project-links {
     text-align: center;
-    border-top: 1px solid #444;
+    border-top: 1px solid var(--divider-color);
     padding-top: 20px;
 }
 
@@ -406,4 +392,53 @@ footer {
 
 .project-link-btn:hover {
     background-color: var(--secondary-color);
+}
+
+/* --- Skills Section Styles --- */
+#skills {
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--divider-color); /* <-- ADDED DIVIDER */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: var(--card-background);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+    font-size: 3rem; /* Make the icons large */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* --- Project Note Style --- */
+.project-note {
+    font-size: 0.9rem;
+    color: #888; /* A slightly lighter grey to make it look like a sub-note */
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 3px solid #ccc;
+    background-color: #f7f7f7; /* A very light grey background */
+    border-radius: 5px;
 }

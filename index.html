@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPX - Portfolio</title>
@@ -8,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- NEW: Font Awesome for skill icons -->
+    <!-- Font Awesome for skill icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
         <div class="container">
             <div class="header-content">
                 <div>
-                    <h1>KPX</h1>
+                    <img src="kpx_logo.png" alt="KPX Logo" class="header-logo">
                     <p>Keep Projects Xtra-safe</p>
                 </div>
                 <nav>
@@ -33,20 +34,36 @@
         <div class="container fade-in">
             <h2>My Projects</h2>
             <div class="projects-grid">
+                <!-- Project Card 1: KPX Backup -->
                 <div class="project-card">
                     <img src="kpx_backup_screenshot.png" alt="KPX Backup Screenshot">
                     <div class="project-info">
                         <h3>KPX Backup</h3>
                         <p>A professional desktop application for automated and scheduled backups. Built with Python and Tkinter.</p>
-                        <a href="kpx_backup.html" class="view-details-btn">View Details</a>
-                        <a href="https://github.com/YourUsername/KPX_Backup" target="_blank">View on GitHub</a>
+                        <a href="kpx_backup.html" class="secondary-action-btn">View Details</a>
+                        <a href="https://kapxho.github.io/" target="_blank" class="secondary-action-btn">View on GitHub</a>
                     </div>
                 </div>
 
+                <!-- Project Card 2: Preventivatore Web (TesseT) -->
                 <div class="project-card">
+                    <img src="preventivatore_dashboard.png" alt="Preventivatore Web Screenshot">
                     <div class="project-info">
-                        <h3>Coming Soon...</h3>
-                        <p>My next big project is already in the works!</p>
+                        <h3>Preventivatore Web</h3>
+                        <p>A modern web application for managing quotes in the Italian construction industry. Features user management, a dynamic product catalog, and an advanced pricing engine.</p>
+                        <p class="project-note"><em>This is a private, professional project. For more information or to discuss a similar project, please feel free to contact me.</em></p>
+                        <a href="tesseT.html" class="secondary-action-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: CRM System -->
+                <div class="project-card">
+                    <img src="crm_logo.png" alt="CRM System Screenshot">
+                    <div class="project-info">
+                        <h3>CRM System</h3>
+                        <p>A desktop application for managing customer relationships and sales pipelines. Built for efficiency and to keep track of important client interactions.</p>
+                        <p class="project-note"><em>This is a private, professional project. For more information or to discuss a similar project, please feel free to contact me.</em></p>
+                        <a href="crm_details.html" class="secondary-action-btn">View Details</a>
                     </div>
                 </div>
             </div>
@@ -60,6 +77,18 @@
                 <div class="skill-card">
                     <i class="fab fa-python"></i>
                     <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Express.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>PostgreSQL</h3>
                 </div>
                 <div class="skill-card">
                     <i class="fab fa-html5"></i>
@@ -80,6 +109,26 @@
                 <div class="skill-card">
                     <i class="fas fa-desktop"></i>
                     <h3>Desktop Apps</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-code"></i>
+                    <h3>EJS</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-upload"></i>
+                    <h3>Multer</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>bcrypt</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-excel"></i>
+                    <h3>XLSX</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>PDFKit</h3>
                 </div>
             </div>
         </div>
