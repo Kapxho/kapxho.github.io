@@ -1,0 +1,409 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #2E8B57; /* SeaGreen - A vibrant, professional green */
+    --secondary-color: #1E5F3E; /* A darker green for hover effects */
+    --background-color: #1a1a1a; /* A soft black for the main background */
+    --text-color: #e0e0e0; /* A soft white for easy reading */
+    --card-background: #2a2a2a; /* A slightly lighter black for the cards */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Smooth Scrolling --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Header Styles --- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a0d0d0; /* A light grey for the hover effect */
+}
+
+/* --- Main Content & Project Grid --- */
+main h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #444; /* <-- ADDED DIVIDER */
+    padding-bottom: 40px; /* <-- ADDED PADDING */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto; /* Let the height adjust automatically to maintain the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    image-rendering: -webkit-optimize-contrast; /* A small trick for sharper rendering in some browsers */
+    image-rendering: crisp-edges;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.project-info p {
+    margin-bottom: 15px;
+}
+
+.project-info a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-info a:hover {
+    background-color: var(--secondary-color);
+}
+
+.view-details-btn {
+    display: block; /* Puts it on its own line */
+    margin-bottom: 10px;
+    background-color: #555;
+}
+
+/* --- Contact Section --- */
+#contact {
+    text-align: center;
+    padding: 40px 0; /* <-- CHANGED FROM 60px 0 */
+    border-bottom: 1px solid #444; /* <-- ADDED DIVIDER */
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    border: none; /* Good practice for buttons */
+    cursor: pointer; /* Good practice for buttons */
+}
+
+.contact-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Skills Section --- */
+#skills {
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #444; /* <-- ADDED DIVIDER */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: var(--card-background);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+    font-size: 3rem; /* Make the icons large */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px; /* <-- ADDED MARGIN FOR SPACE ABOVE FOOTER */
+}
+
+/* --- Modal Styles --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place even when scrolling */
+    z-index: 1000; /* Sit on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    margin: 15% auto; /* 15% from the top and centered horizontally */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    animation: slidedown 0.5s ease-out;
+}
+
+@keyframes slidedown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--text-color);
+}
+
+.modal-email-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-email-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Fade-in Animation --- */
+.fade-in {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start 20px down from its final position */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End at its final position */
+}
+
+/* --- Responsive Design for Smaller Screens --- */
+
+/* For tablets and smaller (screens up to 768px wide) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Make the projects stack in a single column */
+        gap: 20px;
+    }
+}
+
+/* For mobile phones (screens up to 480px wide) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 1.5rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main h2 {
+        font-size: 1.8rem;
+    }
+    
+    .project-card {
+        padding: 0; /* Remove padding from the card itself */
+    }
+
+    .project-info {
+        padding: 15px;
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Project Details Page Styles --- */
+.project-details-page .container {
+    max-width: 900px; /* A bit narrower for long-form text */
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.project-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.details-screenshots img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.details-info h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.details-info ul {
+    list-style-type: '✅ '; /* Custom checkmark bullets */
+    padding-left: 0;
+}
+
+.project-links {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.project-link-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link-btn:hover {
+    background-color: var(--secondary-color);
+}
